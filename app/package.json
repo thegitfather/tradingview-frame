@@ -1,0 +1,15 @@
+{
+  "name": "TradingView Frame",
+  "description": "",
+  "version": "0.1",
+  "main": "index.html",
+  "window": {
+    "title": "TradingView Frame",
+    "show": false,
+    "frame": true,
+    "width": 1480,
+    "height": 640,
+    "icon": "tradingview.png",
+    "show_in_taskbar": true
+  }
+}
