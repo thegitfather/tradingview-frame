@@ -2,15 +2,15 @@
 
 ![Preview](https://github.com/thegitfather/zzz_assets/blob/master/tradingview-frame/tradingviewframe_mod.png?raw=true)
 
-## Prerequisits
+## Prerequisite
 
-- Node.js
-- npm
+- [Node.js](https://nodejs.org)
+- npm (comes with Node)
 - [NW.js](https://nwjs.io/) or install with [nwjs npm package](https://www.npmjs.com/package/nwjs)
 
 ## Start
 
-When `nw` is found in your `$PATH` start with:
+When `nw` is in your `$PATH` start with:
 
 ```shell
 $ nw tradingview-frame/app
