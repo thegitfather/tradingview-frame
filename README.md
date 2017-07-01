@@ -63,6 +63,12 @@ Values can be adjusted in `app/package.json`:
 ...
 ```
 
+### Donations
+
+BTC: `1CWpaTiyLGuotssbQqrSdPdebVzg92AiAD`
+ETH: `0x4DF44D8Cf4DC8E320755c5C4369c86dA5003f996`
+
+
 ### ToDo
 
 - build complete package with NW.js [http://docs.nwjs.io/en/latest/For%20Developers/Building%20NW.js/#build-flavors](http://docs.nwjs.io/en/latest/For%20Developers/Building%20NW.js/#build-flavors)
