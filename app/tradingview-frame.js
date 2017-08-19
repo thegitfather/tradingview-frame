@@ -14,7 +14,7 @@ if (typeof require !== "undefined") {
     $(function() {
       $.getScript( "https://s3.tradingview.com/tv.js", function() {
         initTradingView();
-        setTimeout(modifyIframe, 5000);
+        setTimeout(modifyIframe, 6000);
       }).done(function() { console.log('request succeeded!'); })
       .fail(function(jqXHR, textStatus, errorThrown) {
         console.error('request failed!');
