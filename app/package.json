@@ -11,5 +11,6 @@
     "height": 640,
     "icon": "tradingview.png",
     "show_in_taskbar": true
-  }
+  },
+  "chromium-args": "--user-data-dir='temp/' --disk-cache-size=1 --media-cache-size=1 --incognito"
 }

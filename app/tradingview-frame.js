@@ -4,9 +4,10 @@ if (typeof require !== "undefined") {
 
     // set proxy
     // nw.App.setProxyConfig("socks5://127.0.0.1:8080");
-    // nw.App.setProxyConfig("http://192.168.2.10:3128");
+    // nw.App.setProxyConfig("http://192.168.2.1:3128");
 
     win.show();
+    // nw.gui.App.clearCache();
 
     // need NW.js SDK version so dev tools will work
     // win.showDevTools();
@@ -29,7 +30,7 @@ if (typeof require !== "undefined") {
 var initTradingView = function() {
   new TradingView.widget({
     "autosize": true,
-    "symbol": "POLONIEX:BTCUSDT",
+    "symbol": "POLONIEX:ETHUSDT",
     "interval": "15",
     "timezone": "Europe/Berlin",
     "theme": "White",
@@ -46,6 +47,14 @@ var initTradingView = function() {
       "POLONIEX:ETHBTC",
       "POLONIEX:XMRBTC",
       "POLONIEX:XMRUSDT",
+      "POLONIEX:XEMBTC",
+      "POLONIEX:LTCUSDT",
+      "POLONIEX:GNTUSD",
+      "POLONIEX:STEEMBTC",
+      "POLONIEX:ZRXUSD",
+      "POLONIEX:ZECUSDT",
+      "POLONIEX:NXTUSDT",
+      "POLONIEX:GNOBTC",
       "OANDA:EURUSD",
       "OANDA:EURGBP",
       "OANDA:USDCNH",
