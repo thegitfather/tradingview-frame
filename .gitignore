@@ -9,4 +9,5 @@ node_modules
 bower_components
 npm-debug.log
 /temp
-
+start.lnk
+tradingview-frame.desktop

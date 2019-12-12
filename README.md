@@ -8,7 +8,13 @@
 - npm (comes with Node)
 - [NW.js](https://nwjs.io/) or install with [nwjs npm package](https://www.npmjs.com/package/nwjs)
 
-## Start
+## Add shortcut / desktop entry (Linux)
+
+```shell
+$ ./install_desktop-entry.sh
+```
+
+## Start via command line
 
 When `nw` is in your `$PATH` start with:
 
@@ -72,4 +78,3 @@ ETH: `0x4DF44D8Cf4DC8E320755c5C4369c86dA5003f996`
 ### ToDo
 
 - build complete package with NW.js [http://docs.nwjs.io/en/latest/For%20Developers/Building%20NW.js/#build-flavors](http://docs.nwjs.io/en/latest/For%20Developers/Building%20NW.js/#build-flavors)
-

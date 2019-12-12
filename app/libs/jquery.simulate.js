@@ -105,8 +105,8 @@ $.extend( $.simulate.prototype, {
 			doc = isDocument(this.target)? this.target : (this.target.ownerDocument || document),
 			docEle,
 			body;
-		
-		
+
+
 		options = $.extend({
 			bubbles: true,
 			cancelable: (type !== "mousemove"),
@@ -124,8 +124,8 @@ $.extend( $.simulate.prototype, {
 			relatedTarget: undefined
 		}, options );
 
-		
-		
+
+
 		if ( doc.createEvent ) {
 			event = doc.createEvent( "MouseEvents" );
 			event.initMouseEvent( type, options.bubbles, options.cancelable,
@@ -296,7 +296,7 @@ function findCenter( elem ) {
 	var offset,
 		$document,
 		$elem = $( elem );
-	
+
 	if ( isDocument($elem[0]) ) {
 		$document = $elem;
 		offset = { left: 0, top: 0 };
@@ -305,7 +305,7 @@ function findCenter( elem ) {
 		$document = $( $elem[0].ownerDocument || document );
 		offset = $elem.offset();
 	}
-	
+
 	return {
 		x: offset.left + $elem.outerWidth() / 2 - $document.scrollLeft(),
 		y: offset.top + $elem.outerHeight() / 2 - $document.scrollTop()
@@ -316,7 +316,7 @@ function findCorner( elem ) {
 	var offset,
 		$document,
 		$elem = $( elem );
-	
+
 	if ( isDocument($elem[0]) ) {
 		$document = $elem;
 		offset = { left: 0, top: 0 };

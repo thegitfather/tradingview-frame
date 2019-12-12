@@ -3,7 +3,7 @@
 
 /* jQuery Simulate Extended Plugin 1.3.0
  * http://github.com/j-ulrich/jquery-simulate-ext
- * 
+ *
  * Copyright (c) 2014 Jochen Ulrich
  * Licensed under the MIT license (MIT-LICENSE.txt).
  */
@@ -16,7 +16,7 @@
 	 */
 	var originalMouseEvent = $.simulate.prototype.mouseEvent,
 		rdocument = /\[object (?:HTML)?Document\]/;
-	
+
 	$.simulate.prototype.mouseEvent = function(type, options) {
 		options = options || {};
 		if (options.pageX || options.pageY) {
@@ -26,6 +26,6 @@
 		}
 		return originalMouseEvent.apply(this, [type, options]);
 	};
-	
-	
+
+
 })( jQuery );
