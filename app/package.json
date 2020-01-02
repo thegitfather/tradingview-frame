@@ -12,5 +12,6 @@
     "icon": "tradingview.png",
     "show_in_taskbar": true
   },
-  "chromium-args": "--user-data-dir='temp/' --disk-cache-size=1 --media-cache-size=1 --incognito"
+  "//": "--user-data-dir='temp/' --disk-cache-size=1 --media-cache-size=1 --incognito",
+  "chromium-args": "--user-data-dir='temp/' --disk-cache-size=10048576 --media-cache-size=10048576"
 }
