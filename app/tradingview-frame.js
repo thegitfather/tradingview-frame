@@ -7,6 +7,10 @@ if (typeof require !== "undefined") {
     // nw.App.setProxyConfig("http://192.168.2.1:3128");
 
     win.show();
+
+    // use chrome-args in package.json to disable cache, eg.:
+    // "chromium-args": "--user-data-dir='temp/' --disk-cache-size=1 --media-cache-size=1 --incognito",
+
     // nw.gui.App.clearCache();
 
     // need NW.js SDK version so dev tools will work
@@ -14,8 +18,16 @@ if (typeof require !== "undefined") {
 
     $(function() {
       $.getScript( "https://s3.tradingview.com/tv.js", function() {
-        initTradingView();
-        setTimeout(modifyIframe, 6000);
+        const tvframe = initTradingView();
+
+        if (tvframe && tvframe.iframe) {
+          $(tvframe.iframe).load(() => {
+            // console.log('tvframe loaded');
+            modifyIframe();
+          });
+        } else {
+          console.log('tvframe not loaded..')
+        }
       }).done(function() { console.log('request succeeded!'); })
       .fail(function(jqXHR, textStatus, errorThrown) {
         console.error('request failed!');
@@ -28,10 +40,10 @@ if (typeof require !== "undefined") {
 }
 
 var initTradingView = function() {
-  new TradingView.widget({
+  return new TradingView.widget({
     "autosize": true,
-    "symbol": "POLONIEX:ETHUSDT",
-    "interval": "60",
+    "symbol": "COINBASE:ETHUSD",
+    "interval": "1440", // in minutes; 1 day = 60 * 24
     "timezone": "Europe/Berlin",
     "theme": "White",
     "style": "1",
@@ -72,6 +84,7 @@ var initTradingView = function() {
 
   $("iframe").css("opacity", "0.3").css("pointer-events", "none");
   $("body").attr("style", "margin:0; overflow:hidden;");
+  $("body").attr("style", "background:hidden;");
 };
 
 var modifyIframe = function() {
